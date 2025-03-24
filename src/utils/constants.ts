@@ -3,11 +3,7 @@ export const phone = '604-746-0177'
 export const email = 'legendautoworks1@gmail.com'
 export const address = '3095 McCallum Rd, Abbotsford BC V2S7W4'
 
-export const aboutCopy = `Legend Autoworks is a family run business servicing the Abbotsford and Greater Vancouver Area since 1999.
-
-Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
-
-`
+export const aboutCopy = `Legend Autoworks is a family run business servicing the Abbotsford and Greater Vancouver Area since 1999.`
 export const serviceCopy = `We pride ourselves on our quality of work, precision craftsmanship, and respect for the valuable time of our clients. From tires, brakes and oil changes to engine rebuilds and custom chassis work, no job is too big or small for us.
 
 Give us a call and let us know what we can do for you today.
