@@ -16,7 +16,7 @@ function ServicesBlock({ order, }: IServicesBlockProps) {
   const services = [
     {
       title: 'Wheels',
-      subtitle: 'Starting at $99.99',
+      subtitle: 'Starting at $109.99',
       description: `
 Wheel alignment
 Suspension
@@ -28,7 +28,7 @@ Camber & caster adjustment
 
     {
       title: 'Brakes',
-      subtitle: 'Starting at $99.99',
+      subtitle: 'Starting at $199.99',
       description: `
 Brake pads
 Rotor resurfacing/replacement
@@ -40,7 +40,7 @@ Brake line repair
 
     {
       title: 'Tires',
-      subtitle: 'Starting at $99.99',
+      subtitle: 'Starting at $50.99',
       description: `
 Installations & balancing
 Tire rotation
@@ -53,7 +53,7 @@ Seasonal tire changes & storage
 
     {
       title: 'Oil & fluids',
-      subtitle: 'Starting at $99.99',
+      subtitle: 'Starting at $75.99',
       description: `
 Engine oil
 Transmission fluid
@@ -66,7 +66,7 @@ Power steering
 
     {
       title: 'Engine repairs',
-      subtitle: 'Starting at $99.99',
+      subtitle: 'Contact for pricing',
       description: `
 Check engine light diagnostics
 Spark plugs & ignition coils
