@@ -181,6 +181,8 @@ function ContactBlock({ order, }: IContactBlockProps) {
           <Text style={{fontSize: Fonts.sm, fontWeight: Fonts.featherWeight,}}>All right reserved.</Text>
         </View>
       </View>
+
+      {mobile && <View style={{flex: 0, width: '100%', minHeight: 64,}} />}
     </Block>
   )
 }
