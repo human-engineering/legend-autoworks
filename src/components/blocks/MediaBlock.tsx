@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { View, } from 'react-native'
+import { View, Image, } from 'react-native'
 import { useSelector } from 'react-redux'
 import { IStores } from '../../state/store'
 import Block from './Block'
@@ -77,6 +77,11 @@ function MediaBlock({ order, }: IMediaBlockProps) {
         <Text
           style={{color: Colors.white, fontSize: Fonts.xxxl,}}
         >{organization}</Text>
+
+        {/* <Image
+          source={require('../../assets/icons/autoworks.png')}
+          style={{width: '100%', aspectRatio: 1, resizeMode: 'contain',}}
+        /> */}
       </View>
     </Block>
   )
