@@ -24,34 +24,34 @@ function Header({ masterRef, }: IHeaderProps) {
 
         <View style={{
           width: '100%', flexDirection: 'row', justifyContent: 'center',
-          paddingHorizontal: Spacing.padding, paddingVertical: Spacing.paddingSm,
+          paddingHorizontal: Spacing.padding, paddingVertical: Spacing.paddingMd,
         }}>
           <TouchableOpacity
             onPress={() => handleScroll(0)}
             style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}
           >
-            <Text style={{fontSize: Fonts.md,}}>HOME</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>HOME</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleScroll(1)}
             style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}
           >
-            <Text style={{fontSize: Fonts.md,}}>ABOUT US</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleScroll(2)}
             style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}
           >
-            <Text style={{fontSize: Fonts.md,}}>SERVICES</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>SERVICES</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleScroll(3)}
             style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}
           >
-            <Text style={{fontSize: Fonts.md,}}>CONTACT</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>CONTACT</Text>
           </TouchableOpacity>
         </View>
 

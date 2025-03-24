@@ -85,6 +85,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
       },
     ],
   ]
+
   const animationsCol = cols.map(() => new Animated.Value(8))
   const animationsRow = cols.map(row => row.map(() => new Animated.Value(8)))
   const handleFocusCol = (index: number, focus: boolean) => {
@@ -108,25 +109,21 @@ function ContactBlock({ order, }: IContactBlockProps) {
         {cols.map((col, colIndex) => (
           <Animated.View
             key={colIndex}
-            onPointerEnter={() => handleFocusCol(colIndex, true)}
-            onPointerLeave={() => handleFocusCol(colIndex, false)}
+            onPointerEnter={mobile ? undefined : () => handleFocusCol(colIndex, true)}
+            onPointerLeave={mobile ? undefined : () => handleFocusCol(colIndex, false)}
             style={{flex: animationsCol[colIndex], flexDirection: 'row',}}
           >
             {col.map((contact, rowIndex) => (
               <Animated.View
                 key={rowIndex}
-                onPointerEnter={() => handleFocusRow(colIndex, rowIndex, true)}
-                onPointerLeave={() => handleFocusRow(colIndex, rowIndex, false)}
+                onPointerEnter={mobile ? undefined : () => handleFocusRow(colIndex, rowIndex, true)}
+                onPointerLeave={mobile ? undefined : () => handleFocusRow(colIndex, rowIndex, false)}
                 style={{flex: animationsRow[colIndex][rowIndex],}}
               >
-                <View
-                  // activeOpacity={1}
-                  // onPress={() => {}}
-                  style={{
-                    width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',
-                    padding: Spacing.paddingSm,
-                  }}
-                >
+                <View style={{
+                  width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',
+                  padding: Spacing.paddingSm,
+                }}>
                   <div
                     onTouchStart={(e) => e.preventDefault()}
                     style={{
@@ -138,14 +135,14 @@ function ContactBlock({ order, }: IContactBlockProps) {
                   <TouchableOpacity
                     activeOpacity={0.9}
                     onPress={() => contact.onPress?.()}
-                    // onPressIn={() => {
-                    //   handleFocusCol(colIndex, true)
-                    //   handleFocusRow(colIndex, rowIndex, true)
-                    // }}
-                    // onPressOut={() => {
-                    //   handleFocusCol(colIndex, false)
-                    //   handleFocusRow(colIndex, rowIndex, false)
-                    // }}
+                    onPressIn={mobile ? () => {
+                      handleFocusCol(colIndex, true)
+                      handleFocusRow(colIndex, rowIndex, true)
+                    } : undefined}
+                    onPressOut={mobile ? () => {
+                      handleFocusCol(colIndex, false)
+                      handleFocusRow(colIndex, rowIndex, false)
+                    } : undefined}
                     style={{
                       width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',
                       borderColor: Colors.lightGrey, borderWidth: 0.3, backgroundColor: Colors.white,

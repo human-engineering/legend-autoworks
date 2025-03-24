@@ -33,7 +33,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
               marginTop: -16, marginBottom: 32,
             }}
           >
-            <Text style={{color: Colors.white, fontSize: Fonts.mdlg,}}>Call Now</Text>
+            <Text style={{color: Colors.white, fontSize: Fonts.mdlg, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
           </TouchableOpacity>
         </View>
 
