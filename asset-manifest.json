@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/legend-autoworks/static/css/main.d5a29b4e.css",
-    "main.js": "/legend-autoworks/static/js/main.fcc749a4.js",
+    "main.js": "/legend-autoworks/static/js/main.91dae010.js",
     "index.html": "/legend-autoworks/index.html",
     "main.d5a29b4e.css.map": "/legend-autoworks/static/css/main.d5a29b4e.css.map",
-    "main.fcc749a4.js.map": "/legend-autoworks/static/js/main.fcc749a4.js.map"
+    "main.91dae010.js.map": "/legend-autoworks/static/js/main.91dae010.js.map"
   },
   "entrypoints": [
     "static/css/main.d5a29b4e.css",
-    "static/js/main.fcc749a4.js"
+    "static/js/main.91dae010.js"
   ]
 }
