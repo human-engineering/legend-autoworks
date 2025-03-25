@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Animated, View, Image, Easing, Dimensions } from 'react-native'
+import { Animated, View, Image, Easing } from 'react-native'
 import { useSelector } from 'react-redux'
 import { IStores } from '../../state/store'
 
@@ -23,7 +23,7 @@ function Carousel({ images }: ICarouselProps) {
       index.current = (index.current + 1) % images.length
       Animated.spring(translateX, {
         toValue: -index.current * width,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start()
     }, 3000)
 
@@ -32,7 +32,7 @@ function Carousel({ images }: ICarouselProps) {
 
   return (
     <View
-      style={{flex: 1, overflow: 'hidden', backgroundColor: Colors.black,}}
+      style={{flex: 1, backgroundColor: Colors.black,}}
       onLayout={(event) => {
         const { width, height, } = event.nativeEvent.layout
         setWidth(width)
@@ -47,7 +47,7 @@ function Carousel({ images }: ICarouselProps) {
           <Image
             key={i}
             source={{ uri: img, }}
-            style={{width: Dimensions.get('window').width / (mobile ? 1 : 2), height: Dimensions.get('window').height / 2, resizeMode: 'cover',}}
+            style={{width: width, height: height, resizeMode: 'cover',}}
           />
         ))}
       </Animated.View>
