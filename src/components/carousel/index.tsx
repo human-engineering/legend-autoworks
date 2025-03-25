@@ -9,45 +9,60 @@ interface ICarouselProps {
 
 function Carousel({ images }: ICarouselProps) {
   const systemStore = useSelector((state: IStores) => state.systemStore)
-  const { mobile, } = systemStore
-  const { Colors, Fonts, Spacing, } = systemStore.mobile ? systemStore.Mobile : systemStore.Desktop
+  const { mobile } = systemStore
+  const { Colors } = systemStore.mobile ? systemStore.Mobile : systemStore.Desktop
 
   const translateX = useRef(new Animated.Value(0)).current
-  const index = useRef(0)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
 
+  const animate = (toValue: number) => {
+    Animated.timing(translateX, {
+      toValue: -toValue,
+      duration: 500,
+      easing: Easing.inOut(Easing.ease),
+      useNativeDriver: true,
+    }).start()
+  }
+
   useEffect(() => {
     if (!width) return
+
     const interval = setInterval(() => {
-      index.current = (index.current + 1) % images.length
-      Animated.spring(translateX, {
-        toValue: -index.current * width,
-        useNativeDriver: true,
-      }).start()
+      const nextIndex = (currentIndex + 1) % images.length
+      setCurrentIndex(nextIndex)
+      animate(nextIndex * width)
     }, 3000)
 
     return () => clearInterval(interval)
-  }, [images, width])
+  }, [images, width, currentIndex])
 
   return (
     <View
-      style={{flex: 1, overflow: 'hidden', backgroundColor: Colors.black,}}
+      style={{flex: 1, overflow: 'hidden', backgroundColor: Colors.black}}
       onLayout={(event) => {
-        const { width, height, } = event.nativeEvent.layout
+        const { width, height } = event.nativeEvent.layout
         setWidth(width)
         setHeight(height)
       }}
     >
-      <Animated.View style={{
-        flexDirection: 'row', width: images.length * width,
-        transform: [{translateX,}],
-      }}>
+      <Animated.View 
+        style={{
+          flexDirection: 'row', 
+          width: images.length * width,
+          transform: [{translateX}]
+        }}
+      >
         {images.map((img, i) => (
           <Image
             key={i}
-            source={{ uri: img, }}
-            style={{width: width, height: height, resizeMode: 'cover',}}
+            source={{ uri: img }}
+            style={{
+              width: width, 
+              height: height, 
+              resizeMode: 'cover'
+            }}
           />
         ))}
       </Animated.View>
