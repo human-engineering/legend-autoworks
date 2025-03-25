@@ -32,7 +32,7 @@ function Carousel({ images }: ICarouselProps) {
       index.current = (index.current + 1) % images.length
       Animated.spring(translateX, {
         toValue: -index.current * width,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start()
     }, 3000)
 
