@@ -26,7 +26,7 @@ Suspension
 Steering calibration
 Camber & caster adjustment
     `,
-    image: 'https://www.shutterstock.com/image-photo/mechanics-using-tools-fix-car-260nw-2490496777.jpg',
+    image: 'https://t4.ftcdn.net/jpg/04/20/64/35/240_F_420643546_8NBmTQ1ayYNrs4S23hlC5hQ4scssLdrK.jpg',
   },
 
   {
@@ -38,7 +38,7 @@ Rotor resurfacing/replacement
 ABS diagnostics & repair
 Brake line repair
     `,
-    image: 'https://www.shutterstock.com/image-photo/brake-pad-repair-car-on-260nw-2493428825.jpg',
+    image: 'https://t3.ftcdn.net/jpg/06/03/13/82/240_F_603138211_6GyJEMEawiGOgK4njVUGcsRnCNRiBVrt.jpg',
   },
 
   {
@@ -51,7 +51,7 @@ Flat tire repair
 TPMS service
 Seasonal tire changes & storage
     `,
-    image: 'https://www.shutterstock.com/image-photo/mechanic-works-tire-repair-shop-260nw-2493428903.jpg',
+    image: 'https://t4.ftcdn.net/jpg/04/12/89/03/360_F_412890375_PFtmCGQK89IgShQNLAlHaXYBmV4bP08e.webp',
   },
 
   {
@@ -64,7 +64,7 @@ Coolant flush & replacement
 Brake fluid
 Power steering
     `,
-    image: 'https://www.shutterstock.com/image-photo/car-mechanic-pouring-engine-oil-260nw-2450363423.jpg',
+    image: 'https://t3.ftcdn.net/jpg/11/77/87/80/360_F_1177878039_NWyfoNYs0SaGTy9JaE9wCAL56Ipu13or.webp',
   },
 
   {
@@ -77,7 +77,7 @@ Timing belts & chains
 Fuel system & injectors
 Engine rebuilds & performance tuning
 `,
-    image: 'https://www.shutterstock.com/image-photo/mechanic-using-wrench-while-working-260nw-2184125681.jpg',
+    image: 'https://t3.ftcdn.net/jpg/01/95/24/52/360_F_195245285_LADUEoso4Y9kczRezkI1zXGqAWeW6BPI.webp',
   },
   
   {
@@ -89,19 +89,27 @@ Turbo & supercharger installation
 Custom exhaust fabrication
 Interior customization (leather seats, LED lighting)
     `,
-    image: 'https://www.shutterstock.com/image-photo/hand-car-mechanic-wrench-auto-260nw-2507631219.jpg',
+    image: 'https://t3.ftcdn.net/jpg/04/23/06/12/360_F_423061253_w5OUZspybfJd6huEOEdaDJFO2Vz8OfAA.webp',
   },
 ]
 
 export const gradientSrc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGszaBqUBqgt3dyfSKQbDtOILWNscEokKp7Q&s'
 export const videoSrc = 'https://www.shutterstock.com/shutterstock/videos/3463171421/preview/stock-footage-auto-mechanic-repairs-car-suspension-in-garage-skilled-technician-uses-wrench-under-vehicle.webm'
 export const carouselImages = [
-  'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1561450724/service_images/shutterstock_727276279.jpg',
-  'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c600_604a/image/upload/v1542044160/category/shutterstock_1140438308.jpg',
-  'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1542044170/category/shutterstock_205217629.jpg',
-  'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c600_604a/image/upload/v1645562992/business/e5a80f8d-68f7-4aaf-b109-67656ecb9b0c.jpg',
-  'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1542044176/category/shutterstock_620447081.jpg',
-  'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/a67fba17a1586ea8b5e543538824a4d3croppedimage.jpg',
-  'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/2c2fe600eca24a655386624e567ef9becroppedimage.jpg',
-  'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/27040a7a6c147945c3c7c905f314f9decroppedimage.jpg',
+  // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1561450724/service_images/shutterstock_727276279.jpg',
+  // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c600_604a/image/upload/v1542044160/category/shutterstock_1140438308.jpg',
+  // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1542044170/category/shutterstock_205217629.jpg',
+  // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c600_604a/image/upload/v1645562992/business/e5a80f8d-68f7-4aaf-b109-67656ecb9b0c.jpg',
+  // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1542044176/category/shutterstock_620447081.jpg',
+  // 'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/a67fba17a1586ea8b5e543538824a4d3croppedimage.jpg',
+  // 'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/2c2fe600eca24a655386624e567ef9becroppedimage.jpg',
+  // 'https://gosite-media.s3.us-west-1.amazonaws.com/upload/5f249654ce5ff660f2fa93e5/27040a7a6c147945c3c7c905f314f9decroppedimage.jpg',
+  'https://t4.ftcdn.net/jpg/03/78/19/95/240_F_378199594_uuDyAF8RiF79DmTmUWJTsixhHrtmVdOG.jpg',
+  'https://t4.ftcdn.net/jpg/02/62/87/35/240_F_262873533_C1hKiNQjMtUuHhmf9nqnLab9pCijRzmT.jpg',
+  'https://t4.ftcdn.net/jpg/05/53/18/95/240_F_553189588_fPA5G8efKyjafwYrl3V7M9YtDi4MVLmT.jpg',
+  'https://t4.ftcdn.net/jpg/03/80/77/17/360_F_380771770_9JlDdEb20K4hz94oB8PWMHIO6TWT9TY9.webp',
+  'https://t3.ftcdn.net/jpg/04/40/13/98/240_F_440139898_xDToisysqxNfkgKIXNcVdvRaVeMIa8sN.jpg',
+  'https://t4.ftcdn.net/jpg/07/52/58/17/240_F_752581763_LpJKYRd5pGjKOlQtxoWvOXQ7PtH7HBXV.jpg',
+  'https://t3.ftcdn.net/jpg/07/52/58/18/240_F_752581875_gEOP0yLNzKpCeFiYtMSMFU8SeqGPj8UH.jpg',
+  'https://t3.ftcdn.net/jpg/02/68/87/96/360_F_268879650_hhq3Skg57M6fpTgGruE3ewaMCX0WtbUR.webp',
 ]

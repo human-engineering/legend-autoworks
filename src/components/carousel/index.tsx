@@ -1,11 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Animated, View, Image, Easing } from 'react-native'
+import { useSelector } from 'react-redux'
+import { IStores } from '../../state/store'
 
 interface ICarouselProps {
   images: string[]
 }
 
 function Carousel({ images }: ICarouselProps) {
+  const systemStore = useSelector((state: IStores) => state.systemStore)
+  const { mobile, } = systemStore
+  const { Colors, Fonts, Spacing, } = systemStore.mobile ? systemStore.Mobile : systemStore.Desktop
+
   const translateX = useRef(new Animated.Value(0)).current
   const index = useRef(0)
   const [width, setWidth] = useState(0)
@@ -36,7 +42,7 @@ function Carousel({ images }: ICarouselProps) {
 
   return (
     <View
-      style={{ flex: 1, overflow: 'hidden' }}
+      style={{flex: 1, overflow: 'hidden', backgroundColor: Colors.black,}}
       onLayout={(event) => {
         const { width, height, } = event.nativeEvent.layout
         setWidth(width)
