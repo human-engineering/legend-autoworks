@@ -50,19 +50,15 @@ function Carousel({ images }: ICarouselProps) {
       }}
     >
       {width > 0 && (
-        <Image
-          source={{ uri: images[0], }}
-          style={{width: width, height: height, resizeMode: 'cover',}}
-        />
-        // <Animated.View style={{width: images.length * width, height: '100%', flexDirection: 'row', transform: [{translateX,}],}}>
-        //   {images.map((img, i) => (
-        //     <Image
-        //       key={i}
-        //       source={{ uri: img, }}
-        //       style={{width: width, height: height, resizeMode: 'cover',}}
-        //     />
-        //   ))}
-        // </Animated.View>
+        <Animated.View style={{width: images.length * width, height: height, flexDirection: 'row', transform: [{translateX,}],}}>
+          {images.map((img, i) => (
+            <Image
+              key={i}
+              source={{ uri: img, }}
+              style={{width: width, height: height, resizeMode: 'cover',}}
+            />
+          ))}
+        </Animated.View>
       )}
     </View>
   )
