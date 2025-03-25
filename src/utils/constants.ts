@@ -85,9 +85,9 @@ Engine rebuilds & performance tuning
     subtitle: 'Contact for pricing',
     description: `
 Performance tuning & ECU remapping
-Turbo & supercharger installation
+Turbos & superchargers
 Custom exhaust fabrication
-Interior customization (leather seats, LED lighting)
+Interior customization
     `,
     image: 'https://t3.ftcdn.net/jpg/04/23/06/12/360_F_423061253_w5OUZspybfJd6huEOEdaDJFO2Vz8OfAA.webp',
   },
