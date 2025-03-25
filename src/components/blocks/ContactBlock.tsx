@@ -105,7 +105,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
 
   return (
     <Block order={order}>
-      <View style={{flex: 1, paddingVertical: Spacing.paddingMd,}}>
+      <View style={{flex: 1,}}>
         {cols.map((col, colIndex) => (
           <Animated.View
             key={colIndex}
@@ -120,10 +120,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
                 onPointerLeave={mobile ? undefined : () => handleFocusRow(colIndex, rowIndex, false)}
                 style={{flex: animationsRow[colIndex][rowIndex],}}
               >
-                <View style={{
-                  width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',
-                  padding: Spacing.paddingSm,
-                }}>
+                <View style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
                   <div
                     onTouchStart={(e) => e.preventDefault()}
                     style={{
