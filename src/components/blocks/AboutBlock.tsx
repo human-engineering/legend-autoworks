@@ -21,9 +21,18 @@ function AboutBlock({ order, }: IAboutBlockProps) {
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
           <View style={{padding: Spacing.padding,}}>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
-            <Text style={{fontSize: Fonts.md, marginBottom: 12,}}>{aboutCopy}</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.cruiserWeight,}}>{aboutCopy}</Text>
+          </View>
+        </View>
+
+        <View style={{flex: 1,}}>
+          <Carousel images={carouselImages} />
+        </View>
+
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
+          <View style={{padding: Spacing.padding,}}>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>WHAT WE DO</Text>
-            <Text style={{fontSize: Fonts.md,}}>{serviceCopy}</Text>
+            <Text style={{fontSize: Fonts.md, fontWeight: Fonts.cruiserWeight,}}>{serviceCopy}</Text>
           </View>
 
           <TouchableOpacity
@@ -35,10 +44,6 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           >
             <Text style={{color: Colors.white, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
           </TouchableOpacity>
-        </View>
-
-        <View style={{flex: 1,}}>
-          <Carousel images={carouselImages} />
         </View>
       </> : <>
         <View style={{flex: 1, flexDirection: 'row',}}>
