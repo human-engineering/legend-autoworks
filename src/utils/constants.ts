@@ -16,6 +16,83 @@ Saturday - 10am to 3pm
 Sunday - closed
 `
 
+export const services = [
+  {
+    title: 'Wheels',
+    subtitle: 'Starting at $109.99',
+    description: `
+Wheel alignment
+Suspension
+Steering calibration
+Camber & caster adjustment
+    `,
+    image: 'https://www.shutterstock.com/image-photo/mechanics-using-tools-fix-car-260nw-2490496777.jpg',
+  },
+
+  {
+    title: 'Brakes',
+    subtitle: 'Starting at $199.99',
+    description: `
+Brake pads
+Rotor resurfacing/replacement
+ABS diagnostics & repair
+Brake line repair
+    `,
+    image: 'https://www.shutterstock.com/image-photo/brake-pad-repair-car-on-260nw-2493428825.jpg',
+  },
+
+  {
+    title: 'Tires',
+    subtitle: 'Starting at $49.99',
+    description: `
+Installations & balancing
+Tire rotation
+Flat tire repair
+TPMS service
+Seasonal tire changes & storage
+    `,
+    image: 'https://www.shutterstock.com/image-photo/mechanic-works-tire-repair-shop-260nw-2493428903.jpg',
+  },
+
+  {
+    title: 'Oil & fluids',
+    subtitle: 'Starting at $74.99',
+    description: `
+Engine oil
+Transmission fluid
+Coolant flush & replacement
+Brake fluid
+Power steering
+    `,
+    image: 'https://www.shutterstock.com/image-photo/car-mechanic-pouring-engine-oil-260nw-2450363423.jpg',
+  },
+
+  {
+    title: 'Engine repairs',
+    subtitle: 'Contact for pricing',
+    description: `
+Check engine light diagnostics
+Spark plugs & ignition coils
+Timing belts & chains
+Fuel system & injectors
+Engine rebuilds & performance tuning
+`,
+    image: 'https://www.shutterstock.com/image-photo/mechanic-using-wrench-while-working-260nw-2184125681.jpg',
+  },
+  
+  {
+    title: 'Custom autowork',
+    subtitle: 'Contact for pricing',
+    description: `
+Performance tuning & ECU remapping
+Turbo & supercharger installation
+Custom exhaust fabrication
+Interior customization (leather seats, LED lighting)
+    `,
+    image: 'https://www.shutterstock.com/image-photo/hand-car-mechanic-wrench-auto-260nw-2507631219.jpg',
+  },
+]
+
 export const gradientSrc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGszaBqUBqgt3dyfSKQbDtOILWNscEokKp7Q&s'
 export const videoSrc = 'https://www.shutterstock.com/shutterstock/videos/3463171421/preview/stock-footage-auto-mechanic-repairs-car-suspension-in-garage-skilled-technician-uses-wrench-under-vehicle.webm'
 export const carouselImages = [

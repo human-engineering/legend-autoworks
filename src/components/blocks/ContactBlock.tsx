@@ -182,7 +182,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
         </View>
       </View>
 
-      {mobile && <View style={{flex: 0, width: '100%', minHeight: 172,}} />}
+      {mobile && <View style={{flex: 0, width: '100%', minHeight: 156,}} />}
     </Block>
   )
 }

@@ -23,7 +23,7 @@ export const Colors = {
   safeLighter: 'rgba(255,255,255,0.85)',
   safeLightest: 'rgba(255,255,255,1)',
   safeDark: 'rgba(0,0,0,0.3)',
-  safeDarker: 'rgba(0,0,0,0.5)',
+  safeDarker: 'rgba(0,0,0,0.6)',
   safeDarkest: 'rgba(0,0,0,0.8)',
   safeLightBackground: 'rgba(255,255,255,0.2)',
   safeLighterBackground: 'rgba(255,255,255,0.5)',
@@ -74,7 +74,7 @@ const INITIAL_STATE: ISystemStore = {
     },
     Spacing: {
       paddingSm: 16,
-      paddingMd: 32,
+      paddingMd: 24,
       padding: 64,
       margin: 64,
       navHeight: 72,

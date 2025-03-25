@@ -48,7 +48,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
             <View style={{padding: Spacing.padding,}}>
               <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
-              <Text style={{fontSize: Fonts.sm,}}>{aboutCopy}</Text>
+              <Text style={{color: Colors.safeDarker, fontSize: Fonts.sm, fontWeight: Fonts.cruiserWeight,}}>{aboutCopy}</Text>
             </View>
           </View>
         </View>
@@ -57,7 +57,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
             <View style={{padding: Spacing.padding,}}>
               <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>WHAT WE DO</Text>
-              <Text style={{fontSize: Fonts.sm,}}>{serviceCopy}</Text>
+              <Text style={{color: Colors.safeDarker, fontSize: Fonts.sm, fontWeight: Fonts.cruiserWeight,}}>{serviceCopy}</Text>
             </View>
 
             <TouchableOpacity

@@ -73,15 +73,12 @@ function MediaBlock({ order, }: IMediaBlockProps) {
           type={'video/mp4'}
         />
       </video>
-      <View style={{position: 'absolute', zIndex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
-        <Text
-          style={{color: Colors.white, fontSize: Fonts.xxxl,}}
-        >{organization}</Text>
 
-        {/* <Image
+      <View style={{position: 'absolute', zIndex: 1, width: '100%', justifyContent: 'center', alignItems: 'center',}}>
+        <Image
           source={require('../../assets/icons/autoworks.png')}
           style={{width: '100%', aspectRatio: 1, resizeMode: 'contain',}}
-        /> */}
+        />
       </View>
     </Block>
   )
