@@ -84,7 +84,6 @@ Engine rebuilds & performance tuning
 Performance tuning & ECU remapping
 Turbo & supercharger installation
 Custom exhaust fabrication
-Suspension lowering/lifting
 Interior customization (leather seats, LED lighting)
       `,
       image: 'https://www.shutterstock.com/image-photo/hand-car-mechanic-wrench-auto-260nw-2507631219.jpg',
