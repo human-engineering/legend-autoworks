@@ -74,10 +74,10 @@ function MediaBlock({ order, }: IMediaBlockProps) {
         />
       </video>
 
-      <View style={{position: 'absolute', zIndex: 1, width: '100%', justifyContent: 'center', alignItems: 'center',}}>
+      <View style={{position: 'absolute', zIndex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',}}>
         <Image
           source={require('../../assets/icons/autoworks.png')}
-          style={{width: '100%', aspectRatio: 1, resizeMode: 'contain',}}
+          style={{width: '100%', maxWidth: 800, aspectRatio: 1, resizeMode: 'contain',}}
         />
       </View>
     </Block>
