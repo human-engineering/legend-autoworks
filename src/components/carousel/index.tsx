@@ -19,7 +19,6 @@ function Carousel({ images }: ICarouselProps) {
 
   useEffect(() => {
     if (!width) return
-
     // const interval = setInterval(() => {
     //   index.current = (index.current + 1) % images.length
     //   Animated.timing(translateX, {
@@ -49,7 +48,12 @@ function Carousel({ images }: ICarouselProps) {
         setHeight(height)
       }}
     >
-      {width > 0 && (
+      {mobile ?
+        <Image
+          source={{ uri: images[0], }}
+          style={{width: width, height: height, resizeMode: 'cover',}}
+        />
+      :
         <Animated.View style={{width: images.length * width, height: height, flexDirection: 'row', transform: [{translateX,}],}}>
           {images.map((img, i) => (
             <Image
@@ -59,7 +63,7 @@ function Carousel({ images }: ICarouselProps) {
             />
           ))}
         </Animated.View>
-      )}
+      }
     </View>
   )
 }
