@@ -78,7 +78,7 @@ Engine rebuilds & performance tuning
     },
     
     {
-      title: 'Custom',
+      title: 'Custom autowork',
       subtitle: 'Contact for pricing',
       description: `
 Performance tuning & ECU remapping
