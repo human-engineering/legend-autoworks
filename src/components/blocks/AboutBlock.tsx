@@ -21,9 +21,9 @@ function AboutBlock({ order, }: IAboutBlockProps) {
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
           <View style={{padding: Spacing.padding,}}>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
-            <Text style={{fontSize: Fonts.md,}}>{aboutCopy}</Text>
+            <Text style={{fontSize: Fonts.lg, marginBottom: 12,}}>{aboutCopy}</Text>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>WHAT WE DO</Text>
-            <Text style={{fontSize: Fonts.md,}}>{serviceCopy}</Text>
+            <Text style={{fontSize: Fonts.lg,}}>{serviceCopy}</Text>
           </View>
 
           <TouchableOpacity
