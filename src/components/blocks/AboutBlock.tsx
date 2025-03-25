@@ -21,9 +21,9 @@ function AboutBlock({ order, }: IAboutBlockProps) {
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
           <View style={{padding: Spacing.padding,}}>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
-            <Text style={{fontSize: Fonts.mdlg,}}>{aboutCopy}</Text>
+            <Text style={{fontSize: Fonts.md,}}>{aboutCopy}</Text>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>WHAT WE DO</Text>
-            <Text style={{fontSize: Fonts.mdlg,}}>{serviceCopy}</Text>
+            <Text style={{fontSize: Fonts.md,}}>{serviceCopy}</Text>
           </View>
 
           <TouchableOpacity
@@ -33,7 +33,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
               marginTop: -16, marginBottom: 32,
             }}
           >
-            <Text style={{color: Colors.white, fontSize: Fonts.mdlg, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
+            <Text style={{color: Colors.white, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
           </TouchableOpacity>
         </View>
 
@@ -48,7 +48,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
             <View style={{padding: Spacing.padding,}}>
               <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
-              <Text style={{fontSize: Fonts.mdlg,}}>{aboutCopy}</Text>
+              <Text style={{fontSize: Fonts.sm,}}>{aboutCopy}</Text>
             </View>
           </View>
         </View>
@@ -57,7 +57,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
             <View style={{padding: Spacing.padding,}}>
               <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>WHAT WE DO</Text>
-              <Text style={{fontSize: Fonts.mdlg,}}>{serviceCopy}</Text>
+              <Text style={{fontSize: Fonts.sm,}}>{serviceCopy}</Text>
             </View>
 
             <TouchableOpacity
@@ -66,7 +66,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
                 marginTop: -16, marginBottom: 32,
               }}
             >
-              <Text style={{color: Colors.white, fontSize: Fonts.mdlg, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
+              <Text style={{color: Colors.white, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
             </TouchableOpacity>
           </View>
           <View style={{flex: 1,}}>

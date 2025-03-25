@@ -40,7 +40,7 @@ Brake line repair
 
     {
       title: 'Tires',
-      subtitle: 'Starting at $50.99',
+      subtitle: 'Starting at $49.99',
       description: `
 Installations & balancing
 Tire rotation
@@ -53,7 +53,7 @@ Seasonal tire changes & storage
 
     {
       title: 'Oil & fluids',
-      subtitle: 'Starting at $75.99',
+      subtitle: 'Starting at $74.99',
       description: `
 Engine oil
 Transmission fluid
@@ -137,7 +137,7 @@ Interior customization (leather seats, LED lighting)
 
                 <View style={{flex: 1, borderColor: Colors.lightGrey, borderBottomWidth: 0.3,}}>
                   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: Spacing.paddingMd,}}>
-                    <Text style={{fontSize: mobile ? Fonts.mdlg : Fonts.lg, fontWeight: Fonts.heavyWeight,}}>{service.title} <Text style={{color: Colors.lightBlue, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>{expandedIndex === index ? '' : ' ▼'}</Text></Text>
+                    <Text style={{fontSize: mobile ? Fonts.mdlg : Fonts.lg, fontWeight: Fonts.heavyWeight,}}>{service.title} <Text style={{color: expandedIndex === index ? Colors.red : Colors.lightBlue, fontSize: Fonts.sm, fontWeight: Fonts.heavyWeight, bottom: 2,}}>{expandedIndex === index ? ' ▲' : ' ▼'}</Text></Text>
                     <Text style={{color: Colors.safeDarkest, fontSize: Fonts.md, fontWeight: Fonts.featherWeight,}}>{service.subtitle}</Text>
                     {expandedIndex === index &&
                       <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.featherWeight, textAlign: 'center',}}>{service.description}</Text>
