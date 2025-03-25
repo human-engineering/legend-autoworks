@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { View, Image, } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { Animated, View, Image, Easing } from 'react-native'
 import { useSelector } from 'react-redux'
 import { IStores } from '../../state/store'
 
@@ -9,76 +9,57 @@ interface ICarouselProps {
 
 function Carousel({ images }: ICarouselProps) {
   const systemStore = useSelector((state: IStores) => state.systemStore)
-  const { mobile } = systemStore
-  const { Colors, Fonts, Spacing } = systemStore.mobile ? systemStore.Mobile : systemStore.Desktop
+  const { mobile, } = systemStore
+  const { Colors, Fonts, Spacing, } = systemStore.mobile ? systemStore.Mobile : systemStore.Desktop
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const translateX = useRef(new Animated.Value(0)).current
+  const index = useRef(0)
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
-    if (!dimensions.width) return
+    if (!width) return
 
+    // const interval = setInterval(() => {
+    //   index.current = (index.current + 1) % images.length
+    //   Animated.timing(translateX, {
+    //     toValue: -index.current * width,
+    //     duration: 1500, // Slower transition
+    //     easing: Easing.out(Easing.exp),
+    //     useNativeDriver: true,
+    //   }).start()
+    // }, 3000)
     const interval = setInterval(() => {
-      setIsTransitioning(true)
-      
-      // Trigger transition
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-        setIsTransitioning(false)
-      }, 300) // Duration of transition
+      index.current = (index.current + 1) % images.length
+      Animated.spring(translateX, {
+        toValue: -index.current * width,
+        useNativeDriver: true,
+      }).start()
     }, 3000)
 
     return () => clearInterval(interval)
-  }, [images, dimensions.width])
-
-  const handleLayout = (event: any) => {
-    const { width, height } = event.nativeEvent.layout
-    setDimensions({ width, height })
-  }
+  }, [images, width])
 
   return (
     <View
-      style={[
-        {
-          flex: 1,
-          overflow: 'hidden'
-        }, 
-        { backgroundColor: Colors.black }
-      ]}
-      onLayout={handleLayout}
+      style={{width: '100%', height: '100%', overflow: 'hidden', backgroundColor: Colors.black,}}
+      onLayout={(event) => {
+        const { width, height, } = event.nativeEvent.layout
+        setWidth(width)
+        setHeight(height)
+      }}
     >
-      <View 
-        style={[
-          {
-            flexDirection: 'row',
-            transition: 'transform 300ms ease-out'
-          } as any, 
-          isTransitioning && {
-            transition: 'transform 300ms ease-out'
-          } as any,
-          { 
-            width: images.length * dimensions.width,
-            transform: [{ 
-              translateX: -currentIndex * dimensions.width 
-            }]
-          }
-        ]}
-      >
-        {images.map((img, i) => (
-          <Image
-            key={i}
-            source={{ uri: img }}
-            style={[
-              {resizeMode: 'cover'},
-              { 
-                width: dimensions.width, 
-                height: dimensions.height 
-              }
-            ]}
-          />
-        ))}
-      </View>
+      {width > 0 && (
+        <Animated.View style={{width: images.length * width, height: '100%', flexDirection: 'row', transform: [{translateX,}],}}>
+          {images.map((img, i) => (
+            <Image
+              key={i}
+              source={{ uri: img, }}
+              style={{width: width, height: height, resizeMode: 'cover',}}
+            />
+          ))}
+        </Animated.View>
+      )}
     </View>
   )
 }
