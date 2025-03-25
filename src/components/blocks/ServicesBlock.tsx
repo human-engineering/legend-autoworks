@@ -58,7 +58,7 @@ function ServicesBlock({ order, }: IServicesBlockProps) {
                   />
                 </View>
 
-                <View style={{flex: 1, borderColor: Colors.lightGrey, borderBottomWidth: 0.3,}}>
+                <View style={{flex: 1, borderColor: Colors.lightGrey, borderTopWidth: 0.3,}}>
                   <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: Spacing.paddingMd,}}>
                     <Text style={{fontSize: Fonts.lg, fontWeight: Fonts.heavyWeight,}}>{service.title} <Text style={{color: expandedIndex === index ? Colors.red : Colors.lightBlue, fontSize: Fonts.sm, fontWeight: Fonts.heavyWeight, bottom: 2,}}>{expandedIndex === index ? ' ▲' : ' ▼'}</Text></Text>
                     <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.featherWeight,}}>{service.subtitle}</Text>
