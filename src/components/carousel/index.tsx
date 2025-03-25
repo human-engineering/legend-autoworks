@@ -19,21 +19,11 @@ function Carousel({ images }: ICarouselProps) {
 
   useEffect(() => {
     if (!width) return
-
-    // const interval = setInterval(() => {
-    //   index.current = (index.current + 1) % images.length
-    //   Animated.timing(translateX, {
-    //     toValue: -index.current * width,
-    //     duration: 1500, // Slower transition
-    //     easing: Easing.out(Easing.exp),
-    //     useNativeDriver: true,
-    //   }).start()
-    // }, 3000)
     const interval = setInterval(() => {
       index.current = (index.current + 1) % images.length
       Animated.spring(translateX, {
         toValue: -index.current * width,
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start()
     }, 3000)
 
@@ -49,7 +39,10 @@ function Carousel({ images }: ICarouselProps) {
         setHeight(height)
       }}
     >
-      <Animated.View style={{flexDirection: 'row', width: images.length * width, transform: [{translateX,}],}}>
+      <Animated.View style={{
+        flexDirection: 'row', width: images.length * width,
+        transform: [{translateX,}],
+      }}>
         {images.map((img, i) => (
           <Image
             key={i}
