@@ -41,7 +41,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
           name: 'Apple maps',
           description: `${address}`,
           image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRya129uQz3S6yZM7_0T-Jm8qgNklN1ruUItQ&s',
-          onPress: () => Linking.openURL(`maps://?q=${encodeURIComponent(address)}`),
+          onPress: () => Linking.openURL(`https://maps.apple.com/?q=${encodeURIComponent(address)}`),
         },
       ],
       [
@@ -76,7 +76,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
         name: 'Apple maps',
         description: `${address}`,
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRya129uQz3S6yZM7_0T-Jm8qgNklN1ruUItQ&s',
-        onPress: () => Linking.openURL(`maps://?q=${encodeURIComponent(address)}`),
+        onPress: () => Linking.openURL(`https://maps.apple.com/?q=${encodeURIComponent(address)}`),
       },
       {
         name: 'Hours of operation',
