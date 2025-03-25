@@ -94,7 +94,8 @@ Interior customization (leather seats, LED lighting)
 ]
 
 export const gradientSrc = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGszaBqUBqgt3dyfSKQbDtOILWNscEokKp7Q&s'
-export const videoSrc = 'https://www.shutterstock.com/shutterstock/videos/3463171421/preview/stock-footage-auto-mechanic-repairs-car-suspension-in-garage-skilled-technician-uses-wrench-under-vehicle.webm'
+// export const videoSrc = 'https://www.shutterstock.com/shutterstock/videos/3463171421/preview/stock-footage-auto-mechanic-repairs-car-suspension-in-garage-skilled-technician-uses-wrench-under-vehicle.webm'
+export const videoSrc = 'https://hel-case.s3.us-east-2.amazonaws.com/video.mp4'
 export const carouselImages = [
   // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c3200_a/image/upload/v1561450724/service_images/shutterstock_727276279.jpg',
   // 'https://speedy.uenicdn.com/70c395df-ec7d-49aa-8092-f439d1e5285e/c600_604a/image/upload/v1542044160/category/shutterstock_1140438308.jpg',

@@ -55,7 +55,7 @@ function Carousel({ images }: ICarouselProps) {
             <Image
               key={i}
               source={{ uri: img, }}
-              style={{width: width, height: height, resizeMode: 'cover',}}
+              style={{width: width, height: height, objectFit: 'cover',}}
             />
           ))}
         </Animated.View>
