@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Animated, View, Image, Easing } from 'react-native'
+import { Animated, View, Image, Easing, Dimensions } from 'react-native'
 import { useSelector } from 'react-redux'
 import { IStores } from '../../state/store'
 
@@ -47,7 +47,7 @@ function Carousel({ images }: ICarouselProps) {
           <Image
             key={i}
             source={{ uri: img, }}
-            style={{width: width, height: height, objectFit: 'cover',}}
+            style={{width: Dimensions.get('window').width / (mobile ? 1 : 2), height: Dimensions.get('window').height / 2, resizeMode: 'cover',}}
           />
         ))}
       </Animated.View>
