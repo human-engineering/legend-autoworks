@@ -41,7 +41,7 @@ function Carousel({ images }: ICarouselProps) {
 
   return (
     <View
-      style={{width: '100%', height: '100%', overflow: 'hidden', backgroundColor: Colors.black,}}
+      style={{flex: 1, overflow: 'hidden', backgroundColor: Colors.black,}}
       onLayout={(event) => {
         const { width, height, } = event.nativeEvent.layout
         setWidth(width)
