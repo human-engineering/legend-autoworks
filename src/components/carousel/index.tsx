@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Image, StyleSheet } from 'react-native'
+import { View, Image, } from 'react-native'
 import { useSelector } from 'react-redux'
 import { IStores } from '../../state/store'
 
@@ -14,12 +14,19 @@ function Carousel({ images }: ICarouselProps) {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   useEffect(() => {
     if (!dimensions.width) return
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+      setIsTransitioning(true)
+      
+      // Trigger transition
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+        setIsTransitioning(false)
+      }, 300) // Duration of transition
     }, 3000)
 
     return () => clearInterval(interval)
@@ -33,14 +40,23 @@ function Carousel({ images }: ICarouselProps) {
   return (
     <View
       style={[
-        styles.container, 
+        {
+          flex: 1,
+          overflow: 'hidden'
+        }, 
         { backgroundColor: Colors.black }
       ]}
       onLayout={handleLayout}
     >
       <View 
         style={[
-          styles.carouselContent, 
+          {
+            flexDirection: 'row',
+            transition: 'transform 300ms ease-out'
+          } as any, 
+          isTransitioning && {
+            transition: 'transform 300ms ease-out'
+          } as any,
           { 
             width: images.length * dimensions.width,
             transform: [{ 
@@ -54,7 +70,7 @@ function Carousel({ images }: ICarouselProps) {
             key={i}
             source={{ uri: img }}
             style={[
-              styles.image,
+              {resizeMode: 'cover'},
               { 
                 width: dimensions.width, 
                 height: dimensions.height 
@@ -66,18 +82,5 @@ function Carousel({ images }: ICarouselProps) {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    overflow: 'hidden'
-  },
-  carouselContent: {
-    flexDirection: 'row'
-  },
-  image: {
-    resizeMode: 'cover'
-  }
-})
 
 export default Carousel
