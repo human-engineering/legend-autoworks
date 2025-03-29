@@ -58,7 +58,7 @@ function MediaBlock({ order, }: IMediaBlockProps) {
   }, [])
 
   return (
-    <Block order={order}>
+    <Block order={order} fillContainer={true}>
       <video
         ref={videoRef}
         playsInline

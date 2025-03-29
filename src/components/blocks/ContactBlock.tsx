@@ -104,7 +104,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
   }
 
   return (
-    <Block order={order}>
+    <Block order={order} fillContainer={true}>
       <View style={{flex: 1,}}>
         {cols.map((col, colIndex) => (
           <Animated.View
