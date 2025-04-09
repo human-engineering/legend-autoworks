@@ -32,7 +32,7 @@ function ServicesBlock({ order, }: IServicesBlockProps) {
 
   return (
     <Block order={order} style={{paddingHorizontal: Spacing.paddingSm,}}>
-      <View style={{flex: 1, borderRadius: 16, borderWidth: 0.3, borderColor: Colors.lightBlue, overflow: 'hidden',}}>
+      <View style={{flex: 1, borderRadius: 16, borderWidth: 2, borderColor: Colors.lightBlue, overflow: 'hidden',}}>
         <BlurBackground dark={false} blur={3} zIndex={0} />
 
         {services.map((service, index) => {
