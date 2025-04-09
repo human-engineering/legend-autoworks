@@ -104,8 +104,8 @@ function ContactBlock({ order, }: IContactBlockProps) {
   }
 
   return (
-    <Block order={order} style={{paddingHorizontal: Spacing.paddingSm,}}>
-      <View style={{flex: 1, paddingVertical: Spacing.paddingSm,}}>
+    <Block order={order} style={{paddingHorizontal: Spacing.paddingSm, paddingVertical: Spacing.paddingSm,}}>
+      <View style={{flex: 1, borderRadius: 16, overflow: 'hidden',}}>
         {cols.map((col, colIndex) => (
           <Animated.View
             key={colIndex}
@@ -142,7 +142,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
                     } : undefined}
                     style={{
                       width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center',
-                      borderColor: Colors.lightGrey, borderWidth: 0.3, borderRadius: 16, backgroundColor: Colors.white,
+                      borderColor: Colors.lightGrey, borderWidth: 0.3, backgroundColor: Colors.white,
                       padding: Spacing.paddingMd, overflow: 'hidden',
                     }}
                   >
