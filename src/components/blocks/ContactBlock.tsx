@@ -154,7 +154,7 @@ function ContactBlock({ order, }: IContactBlockProps) {
                       <>
                         <Image
                           source={{ uri: contact.image, }}
-                          style={{position: 'absolute', zIndex: -1, width: '100%', height: '100%', resizeMode: 'cover',}}
+                          style={{position: 'absolute', zIndex: -1, width: '100%', height: '100%', resizeMode: 'cover', ...{pointerEvents: 'none',} as any,}}
                         />
 
                         <BlurBackground dark={true} blur={3} zIndex={0} />
