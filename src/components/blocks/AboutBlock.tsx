@@ -16,8 +16,8 @@ function AboutBlock({ order, }: IAboutBlockProps) {
   const { Colors, Fonts, Spacing, } = mobile ? systemStore.Mobile : systemStore.Desktop
 
   return (
-    <Block order={order}>
-      {mobile ? <>
+    <Block order={order} style={{paddingHorizontal: Spacing.paddingSm,}}>
+      {mobile ? <View style={{flex: 1,  paddingVertical: Spacing.paddingMd,}}>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
           <View style={{padding: Spacing.padding,}}>
             <Text style={{fontSize: Fonts.xl, fontWeight: Fonts.heavyWeight,}}>ABOUT US</Text>
@@ -25,7 +25,7 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           </View>
         </View>
 
-        <View style={{flex: 1,}}>
+        <View style={{flex: 1, borderRadius: 16, overflow: 'hidden',}}>
           <Carousel images={carouselImages} />
         </View>
 
@@ -38,16 +38,16 @@ function AboutBlock({ order, }: IAboutBlockProps) {
           <TouchableOpacity
             onPress={() => Linking.openURL(phone)}
             style={{
-              backgroundColor: Colors.lightBlue, borderRadius: 32, paddingHorizontal: 32, paddingVertical: 8,
+              backgroundColor: Colors.lightBlue, borderRadius: 32, paddingHorizontal: 64, paddingVertical: 8,
               marginTop: -16, marginBottom: 32,
             }}
           >
             <Text style={{color: Colors.white, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
           </TouchableOpacity>
         </View>
-      </> : <>
+      </View> : <View style={{flex: 1,  paddingVertical: Spacing.paddingMd,}}>
         <View style={{flex: 1, flexDirection: 'row',}}>
-          <View style={{flex: 1,}}>
+          <View style={{flex: 1, borderRadius: 16, overflow: 'hidden',}}>
             <Carousel images={carouselImages.slice(0, carouselImages.length / 2)} />
           </View>
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
@@ -67,18 +67,18 @@ function AboutBlock({ order, }: IAboutBlockProps) {
 
             <TouchableOpacity
               style={{
-                backgroundColor: Colors.lightBlue, borderRadius: 32, paddingHorizontal: 32, paddingVertical: 8,
+                backgroundColor: Colors.lightBlue, borderRadius: 32, paddingHorizontal: 64, paddingVertical: 8,
                 marginTop: -16, marginBottom: 32,
               }}
             >
               <Text style={{color: Colors.white, fontSize: Fonts.md, fontWeight: Fonts.heavyWeight,}}>Call Now</Text>
             </TouchableOpacity>
           </View>
-          <View style={{flex: 1,}}>
+          <View style={{flex: 1, borderRadius: 16, overflow: 'hidden',}}>
             <Carousel images={carouselImages.slice(carouselImages.length / 2, carouselImages.length)} />
           </View>
         </View>
-      </>}
+      </View>}
     </Block>
   )
 }

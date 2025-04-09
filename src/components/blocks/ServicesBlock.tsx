@@ -5,6 +5,7 @@ import Block from './Block'
 import { Animated, TouchableOpacity, Image, View, } from 'react-native'
 import Text from '../text'
 import { services, } from '../../utils/constants'
+import BlurBackground from '../blurBackground'
 
 interface IServicesBlockProps {
   order: number,
@@ -30,48 +31,52 @@ function ServicesBlock({ order, }: IServicesBlockProps) {
   }
 
   return (
-    <Block order={order}>
-      {services.map((service, index) => {
-        return (
-          <Animated.View
-            key={index}
-            style={{flex: animations[index],}}
-          >
-            <TouchableOpacity
-              activeOpacity={1}
-              onPress={() => handlePress(index)}
-              style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', overflow: 'hidden',}}
-            >                    
-              <div
-                onTouchStart={(e) => e.preventDefault()}
-                style={{
-                  position: 'absolute', zIndex: 1, width: '100%', height: '100%',
-                  pointerEvents: 'none', userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none',
-                }}
-              />
+    <Block order={order} style={{paddingHorizontal: Spacing.paddingSm,}}>
+      <View style={{flex: 1, borderRadius: 16, borderWidth: 0.3, borderColor: Colors.lightBlue, overflow: 'hidden',}}>
+        <BlurBackground dark={false} blur={3} zIndex={0} />
 
-              <View style={{width: '100%', height: '100%', flexDirection: 'row',}}>
-                <View style={{flex: 1, borderColor: Colors.black, borderBottomWidth: index === services.length - 1 ? 0 : 2,}}>
-                  <Image
-                    source={{ uri: service.image, }}
-                    style={{position: 'absolute', zIndex: -1, width: '100%', height: '100%', resizeMode: 'cover',}}
-                  />
-                </View>
+        {services.map((service, index) => {
+          return (
+            <Animated.View
+              key={index}
+              style={{flex: animations[index],}}
+            >
+              <TouchableOpacity
+                activeOpacity={1}
+                onPress={() => handlePress(index)}
+                style={{width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center', overflow: 'hidden',}}
+              >                    
+                <div
+                  onTouchStart={(e) => e.preventDefault()}
+                  style={{
+                    position: 'absolute', zIndex: 1, width: '100%', height: '100%',
+                    pointerEvents: 'none', userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none',
+                  }}
+                />
 
-                <View style={{flex: 1, borderColor: Colors.lightGrey, borderTopWidth: 0.3,}}>
-                  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: Spacing.paddingMd,}}>
-                    <Text style={{fontSize: Fonts.lg, fontWeight: Fonts.heavyWeight,}}>{service.title} <Text style={{color: expandedIndex === index ? Colors.red : Colors.lightBlue, fontSize: Fonts.sm, fontWeight: Fonts.heavyWeight, bottom: 2,}}>{expandedIndex === index ? ' ▲' : ' ▼'}</Text></Text>
-                    <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.featherWeight,}}>{service.subtitle}</Text>
-                    {expandedIndex === index &&
-                      <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.cruiserWeight, textAlign: 'center',}}>{service.description}</Text>
-                    }
+                <View style={{width: '100%', height: '100%', flexDirection: 'row',}}>
+                  <View style={{flex: 1, borderColor: Colors.white, borderBottomWidth: index === services.length - 1 ? 0 : 1,}}>
+                    <Image
+                      source={{ uri: service.image, }}
+                      style={{position: 'absolute', zIndex: -1, width: '100%', height: '100%', resizeMode: 'cover',}}
+                    />
+                  </View>
+
+                  <View style={{flex: 1, borderColor: Colors.lightGrey, borderTopWidth: index === 0 ? 0 : 0.3,}}>
+                    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: Spacing.paddingMd,}}>
+                      <Text style={{fontSize: Fonts.lg, fontWeight: Fonts.heavyWeight,}}>{service.title} <Text style={{color: expandedIndex === index ? Colors.red : Colors.lightBlue, fontSize: Fonts.sm, fontWeight: Fonts.heavyWeight, bottom: 2,}}>{expandedIndex === index ? ' ▲' : ' ▼'}</Text></Text>
+                      <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.featherWeight,}}>{service.subtitle}</Text>
+                      {expandedIndex === index &&
+                        <Text style={{color: Colors.safeDarker, fontSize: Fonts.md, fontWeight: Fonts.cruiserWeight, textAlign: 'center',}}>{service.description}</Text>
+                      }
+                    </View>
                   </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-          </Animated.View>
-        )
-      })}
+              </TouchableOpacity>
+            </Animated.View>
+          )
+        })}
+      </View>
     </Block>
   )
 }

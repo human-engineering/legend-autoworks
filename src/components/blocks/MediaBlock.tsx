@@ -5,6 +5,7 @@ import { IStores } from '../../state/store'
 import Block from './Block'
 import { organization, videoSrc } from '../../utils/constants'
 import Text from '../text'
+import BlurBackground from '../blurBackground'
 
 interface IMediaBlockProps {
   order: number,
@@ -79,6 +80,10 @@ function MediaBlock({ order, }: IMediaBlockProps) {
           source={require('../../assets/icons/autoworks.png')}
           style={{width: '100%', maxWidth: 800, aspectRatio: 1, resizeMode: 'contain',}}
         />
+
+        <View style={{position: 'absolute', zIndex: -1, width: '100%', height: 200, justifyContent: 'center', alignItems: 'center',}}>
+          <BlurBackground zIndex={0} />
+        </View>
       </View>
     </Block>
   )
